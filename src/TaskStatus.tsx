@@ -25,7 +25,7 @@
 
 // export default TaskStatus;
 import { useEffect, useState } from "react";
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
 interface Tasks {
   Totaltasks: number;
   Completed: number;
@@ -41,7 +41,7 @@ const TaskStatus = () => {
   const fetchTaskStatus = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:5001/tasks/status");
+      const response = await fetch("${API_URL}/tasks/status");
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
