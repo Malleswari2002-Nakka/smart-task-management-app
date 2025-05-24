@@ -48,8 +48,6 @@ const AddTask = () => {
         throw new Error("Failed to save task.");
       }
 
-      const newTask = await response.json();
-
       // setTaskList((prevList) => [...prevList, newTask]);
 
       // Clear form
@@ -182,5 +180,4 @@ const AddTask = () => {
   );
 };
 
-export default AddTask;
 export default AddTask;
