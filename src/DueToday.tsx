@@ -38,7 +38,7 @@ const DueToday = () => {
 
   const fetchDueToday = async () => {
     try {
-      const response = await fetch("${API_URL}/tasks/duetoday");
+      const response = await fetch(`${API_URL}/tasks/duetoday`);
       if (!response.ok) throw new Error("Failed to fetch tasks");
       const data: Task[] = await response.json();
       setTasks(data);
