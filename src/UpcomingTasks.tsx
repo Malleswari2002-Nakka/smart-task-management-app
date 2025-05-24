@@ -42,7 +42,7 @@ const UpcomingTasks = () => {
 
   const fetchUpcomingTasks = async () => {
     try {
-      const response = await fetch("${API_URL}/tasks/upcoming");
+      const response = await fetch(`${API_URL}/tasks/upcoming`);
       if (!response.ok) {
         throw new Error("Failed to fetch upcoming tasks");
       }
