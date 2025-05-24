@@ -22,7 +22,7 @@ function Login() {
   ): Promise<void> => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:5001/auth/login", {
+      const response = await fetch("${API_URL}/auth/login", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
