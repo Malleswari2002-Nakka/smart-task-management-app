@@ -18,7 +18,7 @@ const AddTask = () => {
     status: "Select",
   });
 
-  const [taskList, setTaskList] = useState<Task[]>([]);
+  // const [taskList, setTaskList] = useState<Task[]>([]);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -50,7 +50,7 @@ const AddTask = () => {
 
       const newTask = await response.json();
 
-      setTaskList((prevList) => [...prevList, newTask]);
+      // setTaskList((prevList) => [...prevList, newTask]);
 
       // Clear form
       setTaskData({
@@ -60,6 +60,7 @@ const AddTask = () => {
         dueDate: "",
         status: "Select",
       });
+      navigate("/tasks");
     } catch (error) {
       console.error("Error saving task:", error);
       alert("Something went wrong. Please try again.");
@@ -181,4 +182,5 @@ const AddTask = () => {
   );
 };
 
+export default AddTask;
 export default AddTask;
