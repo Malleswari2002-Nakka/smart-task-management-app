@@ -36,7 +36,7 @@ const AddTask = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5001/task/addtask", {
+      const response = await fetch("${API_URL}/addtask", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
