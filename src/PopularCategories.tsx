@@ -55,6 +55,7 @@
 // export default PopularCategories;
 
 import { useEffect, useState } from "react";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
 import {
   PieChart,
   Pie,
@@ -79,7 +80,7 @@ const PopularCategories = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("http://localhost:5001/tasks/categories"); // Adjust URL
+        const response = await fetch("${API_URL}/tasks/categories"); // Adjust URL
         if (!response.ok) throw new Error(`Error: ${response.status}`);
 
         const categoryData: TaskCategory[] = await response.json();
