@@ -1,10 +1,10 @@
 import mysql from 'mysql2/promise';
 const connection=mysql.createPool({
-    host:'localhost',
-    user:'root',
-    password:'Myself@123',
+    host:'smart-app.cbaa68y6oe70.eu-north-1.rds.amazonaws.com',
+    user:'admin',
+    password:'Sugunanakka123',
     database:'smart_app',
-    port:3307
+    port:3306
 })
 try {
     const conn = await connection.getConnection();
