@@ -8,6 +8,7 @@ import autoTable from "jspdf-autotable";
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Head1 from "./Head1";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
 interface Task {
   id: number;
   name: string;
