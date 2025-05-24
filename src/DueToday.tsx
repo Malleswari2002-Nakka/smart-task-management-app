@@ -26,7 +26,7 @@
 
 // export default DueToday;
 import { useEffect, useState } from "react";
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
 interface Task {
   Title: string;
 }
@@ -38,7 +38,7 @@ const DueToday = () => {
 
   const fetchDueToday = async () => {
     try {
-      const response = await fetch("http://localhost:5001/tasks/duetoday");
+      const response = await fetch("{API_URL}/tasks/duetoday");
       if (!response.ok) throw new Error("Failed to fetch tasks");
       const data: Task[] = await response.json();
       setTasks(data);
