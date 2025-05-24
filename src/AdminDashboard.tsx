@@ -290,7 +290,7 @@ const AdminDashboard: React.FC = () => {
 
   useEffect(() => {
     if (!token) {
-      navigate("/login", { replace: true });
+      navigate("/", { replace: true });
       return;
     }
 
@@ -302,7 +302,7 @@ const AdminDashboard: React.FC = () => {
     setLoadingUsers(true);
     setError(null);
     try {
-      const response = await fetch("${API_URL}/api/users", {
+      const response = await fetch(`${API_URL}/api/users`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -331,7 +331,7 @@ const AdminDashboard: React.FC = () => {
     setLoadingLogs(true);
     setError(null);
     try {
-      const response = await fetch("${API_URL}/admin/audit-logs", {
+      const response = await fetch(`${API_URL}/admin/audit-logs`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
