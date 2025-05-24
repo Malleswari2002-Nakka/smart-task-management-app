@@ -154,6 +154,7 @@
 
 // export default CompletedTasksGraph;
 import { useEffect, useState } from "react";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
 import {
   LineChart,
   Line,
@@ -177,7 +178,7 @@ const DueTasksGraph = () => {
   useEffect(() => {
     const fetchDueTasks = async () => {
       try {
-        const response = await fetch("http://localhost:5001/tasks/completed"); // Adjust URL accordingly
+        const response = await fetch("${API_URL}/tasks/completed"); // Adjust URL accordingly
         if (!response.ok) throw new Error(`Error: ${response.status}`);
 
         const rawData: TaskData[] = await response.json();
