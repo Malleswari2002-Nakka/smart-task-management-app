@@ -302,7 +302,7 @@ const AdminDashboard: React.FC = () => {
     setLoadingUsers(true);
     setError(null);
     try {
-      const response = await fetch("http://localhost:5001/api/users", {
+      const response = await fetch("${API_URL}/api/users", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -331,7 +331,7 @@ const AdminDashboard: React.FC = () => {
     setLoadingLogs(true);
     setError(null);
     try {
-      const response = await fetch("http://localhost:5001/admin/audit-logs", {
+      const response = await fetch("${API_URL}/admin/audit-logs", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -364,7 +364,7 @@ const AdminDashboard: React.FC = () => {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
 
     try {
-      const response = await fetch(`http://localhost:5001/admin/${userId}`, {
+      const response = await fetch(`${API_URL}/admin/${userId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
