@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
 function Signup() {
   // let roles = ["User", "Admin"];
   const navigate = useNavigate();
