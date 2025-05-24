@@ -262,7 +262,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header1 from "./Header1";
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
 interface User {
   id: number;
   name: string;
