@@ -23,7 +23,7 @@ const Tasks = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await fetch("http://localhost:5001/tasks/gettasks", {
+        const response = await fetch("${API_URL}/tasks/gettasks", {
           headers: {
             "Content-Type": "application/json",
           },
