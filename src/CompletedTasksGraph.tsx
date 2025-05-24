@@ -178,7 +178,7 @@ const DueTasksGraph = () => {
   useEffect(() => {
     const fetchDueTasks = async () => {
       try {
-        const response = await fetch("${API_URL}/tasks/completed"); // Adjust URL accordingly
+        const response = await fetch(`${API_URL}/tasks/completed`); // Adjust URL accordingly
         if (!response.ok) throw new Error(`Error: ${response.status}`);
 
         const rawData: TaskData[] = await response.json();
