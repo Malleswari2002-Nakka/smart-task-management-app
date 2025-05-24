@@ -137,7 +137,7 @@ const TaskList = ({ sortBy }: { sortBy: string }) => {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch("${API_URL}/tasks/gettasks");
+      const response = await fetch(`${API_URL}/tasks/gettasks`);
       const result = await response.json();
       setTasks(result);
     } catch (error) {
