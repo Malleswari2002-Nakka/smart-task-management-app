@@ -137,7 +137,7 @@ const TaskList = ({ sortBy }: { sortBy: string }) => {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch("http://localhost:5001/tasks/gettasks");
+      const response = await fetch("${API_URL}/tasks/gettasks");
       const result = await response.json();
       setTasks(result);
     } catch (error) {
@@ -171,7 +171,7 @@ const TaskList = ({ sortBy }: { sortBy: string }) => {
 
   const handleDelete = async (taskId: number) => {
     try {
-      await fetch(`http://localhost:5001/deletetasks/${taskId}`, {
+      await fetch(`${API_URL}/deletetasks/${taskId}`, {
         method: "DELETE",
       });
       fetchTasks();
@@ -182,7 +182,7 @@ const TaskList = ({ sortBy }: { sortBy: string }) => {
 
   const markAsComplete = async (taskId: number) => {
     try {
-      await fetch(`http://localhost:5001/updatestatus/${taskId}`, {
+      await fetch(`${API_URL}/updatestatus/${taskId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: "completed" }),
@@ -204,7 +204,7 @@ const TaskList = ({ sortBy }: { sortBy: string }) => {
 
   const handleEditSave = async () => {
     try {
-      await fetch(`http://localhost:5001/updatetasks/${editTaskId}`, {
+      await fetch(`${API_URL}/updatetasks/${editTaskId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(editedTask),
