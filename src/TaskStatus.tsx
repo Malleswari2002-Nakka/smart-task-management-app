@@ -41,7 +41,7 @@ const TaskStatus = () => {
   const fetchTaskStatus = async () => {
     try {
       setLoading(true);
-      const response = await fetch("${API_URL}/tasks/status");
+      const response = await fetch(`${API_URL}/tasks/status`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
