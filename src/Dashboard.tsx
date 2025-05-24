@@ -6,6 +6,7 @@ import DueToday from "./DueToday";
 import PopularCategories from "./PopularCategories";
 import Head from "./Head";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
 const Dashboard = () => {
   return (
     <div>
