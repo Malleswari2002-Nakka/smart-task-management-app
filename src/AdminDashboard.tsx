@@ -338,7 +338,7 @@ const AdminDashboard: React.FC = () => {
       });
 
       if (response.status === 401 || response.status === 403) {
-        navigate("/login", { replace: true });
+        navigate("/", { replace: true });
         return;
       }
 
