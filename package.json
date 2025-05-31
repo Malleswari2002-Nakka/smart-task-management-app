@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build",
-    "preview": "serve -s dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
