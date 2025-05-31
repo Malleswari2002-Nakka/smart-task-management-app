@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react';
 export default defineConfig({
-  base: '/', 
+  base: '/smart-task-management-app/', 
   plugins: [react()],
 });
