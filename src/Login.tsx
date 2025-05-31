@@ -57,8 +57,9 @@ function Login() {
         className="d-flex justify-content-center align-items-center"
         style={{
           height: "100vh",
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./public/smartapp.jpeg')",
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${
+            import.meta.env.BASE_URL
+          }smartapp.jpeg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
