@@ -1,11 +1,9 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
-import { HashRouter, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 createRoot(document.getElementById("root")!).render(
-  <HashRouter basename="/smart-task-management-app">
-    <Routes>
-      <App />
-    </Routes>
-  </HashRouter>
+  <BrowserRouter basename="/smart-task-management-app">
+    <App />
+  </BrowserRouter>
 );
